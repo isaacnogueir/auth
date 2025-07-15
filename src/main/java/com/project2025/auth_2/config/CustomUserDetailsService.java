@@ -14,7 +14,6 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
 
-    // Metodo usado pelo AuthenticationManager para autenticar o usuário no login
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByLogin(username);
